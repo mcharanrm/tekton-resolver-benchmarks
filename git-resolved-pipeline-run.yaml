@@ -12,3 +12,5 @@ spec:
       value: https://github.com/mcharanrm/tekton-resolver-benchmarks.git
     - name: pathInRepo
       value: pipeline/hello-world.yaml
+    - name: revision
+      value: master
