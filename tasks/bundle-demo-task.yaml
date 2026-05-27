@@ -1,0 +1,10 @@
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: bundle-demo-task
+spec:
+  steps:
+  - name: run-echo-cmd
+    image: registry.access.redhat.com/ubi9/ubi-minimal
+    script: echo 'Hello World'

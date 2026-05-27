@@ -1,0 +1,157 @@
+---
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata: 
+  name: bundle-demo-pipeline
+spec:
+  tasks: 
+  - name: print-hello-world-1
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-2
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-3
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-4
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-5
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-6
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-7
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-8
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-9
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-10
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-11
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-12
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-13
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-14
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
+  - name: print-hello-world-15
+    taskRef:
+      resolver: bundles
+      params:
+      - name: bundle
+        value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+      - name: name
+        value: bundle-demo-task
+      - name: kind
+        value: task
