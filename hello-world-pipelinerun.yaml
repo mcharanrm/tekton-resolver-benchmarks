@@ -1,0 +1,17 @@
+---
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata: 
+  name: hello-world-pipelinerun
+  namespace: test-rhtap-1-tenant
+spec:
+  # pipelineRef:
+  #   name: hello-world-pipeline
+  pipelineSpec:
+    tasks: 
+    - name: print-hello-world
+      taskSpec:
+        steps:
+        - name: run-echo-cmd
+          image: ubi-minimal
+          script: echo 'Hello World'
