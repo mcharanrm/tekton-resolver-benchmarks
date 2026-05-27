@@ -7,8 +7,12 @@ metadata:
 spec:
   tasks: 
   - name: print-hello-world
-    taskSpec:
-      steps:
-      - name: run-echo-cmd
-        image: registry.access.redhat.com/ubi9/ubi-minimal
-        script: echo 'Hello World'
+    taskRef:
+      resolver: git
+      params:
+      - name: url
+        value: https://github.com/mcharanrm/tekton-resolver-benchmarks.git
+      - name: pathInRepo
+        value: tasks/run-echo.yaml
+      - name: revision
+        value: master
