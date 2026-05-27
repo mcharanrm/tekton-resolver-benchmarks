@@ -1,0 +1,14 @@
+---
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata: 
+  name: hello-world-pipelinerun
+  namespace: test-rhtap-1-tenant
+spec:
+  pipelineRef:
+    resolver: git
+    params:
+    - name: url
+      value: https://github.com/mcharanrm/tekton-resolver-benchmarks.git
+    - name: pathInRepo
+      value: pipeline/hello-world.yaml
