@@ -13,4 +13,4 @@ spec:
     - name: pathInRepo
       value: pipeline/hello-world.yaml
     - name: revision
-      value: master
+      value: c2971add57044d1a95d68677ebd8a4990a0d5498
