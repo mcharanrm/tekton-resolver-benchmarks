@@ -1,0 +1,16 @@
+---
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata: 
+  generateName: cmusali-test-bundle-demo-pipelinerun-
+  namespace: test-rhtap-1-tenant
+spec:
+  pipelineRef:
+    resolver: bundles
+    params:
+    - name: bundle
+      value: quay.io/cmusali/tekton-bundle-resolver-benchmarks:latest
+    - name: name
+      value: bundle-demo-pipeline
+    - name: kind
+      value: pipeline
