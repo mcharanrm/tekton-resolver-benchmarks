@@ -15,7 +15,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-2
     taskRef:
       resolver: git
@@ -25,7 +25,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-3
     taskRef:
       resolver: git
@@ -35,7 +35,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-4
     taskRef:
       resolver: git
@@ -45,7 +45,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-5
     taskRef:
       resolver: git
@@ -55,7 +55,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-6
     taskRef:
       resolver: git
@@ -65,7 +65,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-7
     taskRef:
       resolver: git
@@ -75,7 +75,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-8
     taskRef:
       resolver: git
@@ -85,7 +85,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-9
     taskRef:
       resolver: git
@@ -95,7 +95,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-10
     taskRef:
       resolver: git
@@ -105,7 +105,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-11
     taskRef:
       resolver: git
@@ -115,7 +115,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-12
     taskRef:
       resolver: git
@@ -125,7 +125,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-13
     taskRef:
       resolver: git
@@ -135,7 +135,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-14
     taskRef:
       resolver: git
@@ -145,7 +145,7 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
   - name: print-hello-world-15
     taskRef:
       resolver: git
@@ -155,4 +155,4 @@ spec:
       - name: pathInRepo
         value: tasks/run-echo.yaml
       - name: revision
-        value: c2971add57044d1a95d68677ebd8a4990a0d5498
+        value: 9a1c55972e004c46d73a6dc72533f9cb0a6c3fee
