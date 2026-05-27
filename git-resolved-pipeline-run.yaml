@@ -2,7 +2,7 @@
 apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata: 
-  name: hello-world-pipelinerun
+  generateName: cmusali-test-pipeline-run-
   namespace: test-rhtap-1-tenant
 spec:
   pipelineRef:
