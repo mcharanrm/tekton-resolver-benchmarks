@@ -5,8 +5,6 @@ metadata:
   name: hello-world-pipelinerun
   namespace: test-rhtap-1-tenant
 spec:
-  # pipelineRef:
-  #   name: hello-world-pipeline
   pipelineSpec:
     tasks: 
     - name: print-hello-world
