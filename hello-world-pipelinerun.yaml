@@ -13,5 +13,5 @@ spec:
       taskSpec:
         steps:
         - name: run-echo-cmd
-          image: ubi-minimal
+          image: registry.access.redhat.com/ubi9/ubi-minimal
           script: echo 'Hello World'
