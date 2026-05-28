@@ -2,7 +2,11 @@
 
 This document summarizes my observations while creating and executing a large number of PipelineRuns under different scenarios within a short period of time. In other words, this testing was focused on running many pipelines in parallel.
 
----
+## Summary
+
+### TL;DR
+
+Git Resolver is reliable at small scale but fails under heavy parallel load when the `revision` is set to a branch name instead of a commit hash. Setting the `revision` value to a commit SHA while using the Git Resolver improves stability when applied consistently across all references. This improves scalability because using a commit hash allows Tekton to cache resolved resources, since the revision becomes immutable and identical requests can reuse previously fetched pipeline and task definitions instead of repeatedly cloning and resolving Git content. The Bundle Resolver shows similar or slightly better behavior  under high concurrency.
 
 # Scenario 1: Using Tekton Git Resolver to Reference Pipeline and Task Definitions Stored in a Git Repository
 
@@ -14,7 +18,7 @@ Created a PipelineRun that references a pipeline definition stored in a Git repo
 
 All 50 pipelines executed successfully and completed without any errors.
 
----
+
 
 ## Attempt 2
 
@@ -24,7 +28,7 @@ Created a PipelineRun that references a pipeline definition stored in a Git repo
 
 All 50 pipelines executed successfully and completed without any errors.
 
----
+
 
 ## Attempt 3
 
@@ -143,7 +147,7 @@ Updated the `revision` parameter from `master` to a commit hash only in the Pipe
 
 100 PipelineRuns were created, and almost all of them failed, similar to the previous scenario. Most (or all) of the failures were due to `CouldntGetPipeline` or `CouldntGetTask` errors.
 
----
+
 
 ## Attempt 2
 
@@ -164,7 +168,7 @@ Most of the PipelineRuns, around 97%, executed successfully and completed withou
         cmusali-test-pipeline-run-drjkm   False       Failed      3m45s       3m23s
         cmusali-test-pipeline-run-pcxc7   False       Failed      3m18s       74s
 
----
+
 # Scenario 3: Using Tekton Bundle Resolver to Reference Pipeline and Task Definitions Stored in a Tekton bundle on a OCI Image Repository
 
 **Note: The bundles were pulled using tags instead of image digests.**
@@ -187,7 +191,7 @@ Created 100 PipelineRuns that reference a pipeline definition stored in a Tekton
 
 All 100 pipelines executed successfully and completed without any errors.
 
----
+
 ## Attempt 2
 
 Extended the pipeline to include 15 additional tasks, with each task referenced using the bundle resolver. After updating and adding it to the bundle, 100 PipelineRuns were created again in parallel.
@@ -220,3 +224,35 @@ The errors from the 10 failed builds were related to `Failure on Task - Pod not 
 </br>
 
 ![Error message](pod-not-found-build-failures-using-bundle-resolver.png)
+
+# Summary
+
+## Key Observations
+
+Git Resolver works fine for 50 parallel PipelineRuns, but failures appear when scaling to 100 runs with multiple remote task resolutions.
+
+Main failures include `CouldntGetPipeline`, `CouldntGetTask`, and occasional Git clone `403` errors.
+
+---
+
+## Impact of Using Commit SHA for Revisions
+
+Using a commit SHA instead of a branch helps only when it is applied consistently across all Git Resolver references.
+
+When done correctly, around 97% of PipelineRuns succeeded and resolver-related errors were completely gone.
+
+---
+
+## Tekton Bundle Resolver Observations
+
+Bundle Resolver handled high parallel workloads better than Git Resolver, even with multiple tasks resolved from the bundle.
+
+Failures observed were not resolver-related and were instead due to `Pod not found`.
+
+---
+
+## Overall Conclusion
+
+Git Resolver is suitable for smaller workloads but struggles under high concurrency with many remote resolutions.
+
+For better scalability and stability, use commit SHA consistently and prefer Bundle Resolver for large-scale executions.
