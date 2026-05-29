@@ -16,6 +16,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-2
       taskSpec:
         steps:
@@ -25,6 +26,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-3
       taskSpec:
         steps:
@@ -34,6 +36,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-4
       taskSpec:
         steps:
@@ -43,6 +46,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-5
       taskSpec:
         steps:
@@ -52,6 +56,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-6
       taskSpec:
         steps:
@@ -61,6 +66,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-7
       taskSpec:
         steps:
@@ -70,6 +76,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-8
       taskSpec:
         steps:
@@ -79,6 +86,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-9
       taskSpec:
         steps:
@@ -88,6 +96,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-10
       taskSpec:
         steps:
@@ -97,6 +106,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-11
       taskSpec:
         steps:
@@ -106,6 +116,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-12
       taskSpec:
         steps:
@@ -115,6 +126,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-13
       taskSpec:
         steps:
@@ -124,6 +136,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-14
       taskSpec:
         steps:
@@ -133,6 +146,7 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
     - name: print-hello-world-15
       taskSpec:
         steps:
@@ -142,3 +156,4 @@ spec:
             #!/bin/bash
             echo "Hello from the Pod. Sleeping for 20sec..."
             sleep 20
+          imagePullPolicy: IfNotPresent
